@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Transaction Count:<span id="count">0</span></p>
+    <button id="inc">Increment</button>
+    <button id="dec">Decrement</button>
+    <button id="res">Reset</button>
+
+    <script>
+        let count=0;
+        const inc=document.getElementById("inc");
+        inc.addEventListener("click",()=>{
+            count++;
+            document.getElementById("count").textContent=count;
+        })
+
+        const dec=document.getElementById("dec");
+        dec.addEventListener("click",()=>{
+            count--;
+            document.getElementById("count").textContent=count;
+        })
+
+        const res=document.getElementById("res");
+        res.addEventListener("click",()=>{
+            count=0;
+            document.getElementById("count").textContent=count;
+        })
+    </script>
+</body>
+</html>
